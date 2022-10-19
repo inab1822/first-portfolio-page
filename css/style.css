@@ -24,7 +24,7 @@ html{
 }
 .snow{
     animation-name: snows;
-    animation-duration: 10s;
+    animation-duration: 70s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
