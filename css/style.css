@@ -1,7 +1,7 @@
 html{
     background-image: url(../images/bg.jpg);
     background-repeat: no-repeat;
-    background-position: 0 center;
+    background-position:center;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -17,22 +17,29 @@ html{
     width: 100%;
     height: 70%;
     position: absolute;
-    top: -226%;
+    top: -110%;
     left: 0;
+    
+    
 }
 .snow{
     animation-name: snows;
-    animation-duration: 70s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
+
 @keyframes snows {
     0%{
-        top: -226%;
+        top: -110%;
     }
     100%{
-        top: -123%;
+        top: 20%;
     }
+}
+.snow .simg img{
+    width: 100%;
+    
 }
 .navBar{
     width: 55%;
@@ -121,8 +128,7 @@ body{
     
 }
 .header ul li{
-    margin:0 54px;
-    
+    width: 25%;    
 }
 .title{
     
@@ -157,7 +163,7 @@ body{
 
 }
 .profilePage{
-    width: 1320px;
+    max-width: 1320px;
     height: 500px;
     
     margin: 80px auto;
