@@ -18,6 +18,9 @@
     
 </head>
 <body>
+    <div class="scrollGaugeBar">
+        <div class="scrollGauge"></div>
+    </div>
     <div class="navBar">
         <ul>
             <li class="profile">Profile</li>
@@ -63,7 +66,27 @@
             
     </div>
 
+    <div class="time">
+        <div class="timeic"><i class="fa-regular fa-clock"></i></div>
+        <div class="timetxt">
+        <p>이 페이지에</p>
+        <ul>
+            <li><span class="hour">0</span>시</li>
+            <li><span class="min">0</span>분</li>
+            <li><span class="sec">0</span>초</li>
+        </ul>
+        <p>동안 머물렀어요.</p>
+        </div>
+    </div>
+
     <div class="main">
+        <div class="bycycle">
+            <div class="track">
+                <img src="images/bycycle.png" class="body">
+                <img src="images/Untitled-1.png" class="wheel1">
+                <img src="images/Untitled-1.png" class="wheel2">
+            </div>
+        </div>
         <div class="letScroll">
             <div class="round"></div>
         </div>
@@ -190,13 +213,13 @@
                     </div>
                 </div>
                 <div class="directmsg">
-                    <form action="https://script.google.com/macros/s/AKfycbwOzcs1fP0iiQGcr5fBY_pKRq8D53u3J4pyb4a41IUPkpjJipDzSHIlHBasl1fBuh30Jg/exec" class="gform" method="post" data-email="example@email.net">
+                    <form action="" class="gform" method="post" data-email="example@email.net">
                         <p>이름</p>
                         <input type="text" class="name" placeholder="홍길동">
                         <p>보내는 사람 주소</p>
                         <input type="email" class="address" placeholder="이메일 입력">
                         <p>내용</p>
-                        <input type="text" class="text" placeholder="내용을 입력하세요">
+                        <textarea name="text" id="" cols="20" rows="9" placeholder="내용을 입력하세요"></textarea>
                         <button><a href="mailto:inab1822@naver.com">보내기</a></button>
                     </form>
                 </div>

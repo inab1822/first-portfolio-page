@@ -4,11 +4,50 @@ $(document).ready(function(){
         $('html').animate({
             scrollTop: '0px'
         });
+        let sec = 0;
+        let min = 0;
+        let hr = 0;
+        setInterval(function(){
+            sec++;
+            $('.sec').text(sec);
+            console.log(sec)
+
+            if(sec == 60){
+                sec= 0;
+                $('.sec').text(sec);
+                min = min+ 1;
+                $('.min').text(min);
+                if(min == 60){
+                    min = 0;
+                    $('.min').text(min);
+                    hr = hr + 1;
+                    $('.hour').text(hr);
+                }
+            }
+            
+        },1000)
+        
     }
+
+    var gaugeBar = $('.scrollGaugeBar').width()
+    console.log(gaugeBar)
+    var gauge = $('.scrollGauge').width();
+    console.log(gauge)
+    var pageheight = $('html').height();
+    console.log(pageheight)
+    var nowheight = $(window).height()
+    console.log(nowheight)
     
     $(window).on('scroll',function(){
 
         let scr = $(window).scrollTop();
+        let barwidth = scr / pageheight * 100
+        console.log(barwidth)
+
+        $('.scrollGauge').css({
+            'width' : 20 + barwidth+'%'
+        })
+        
         let projectPg = $('.projectPage').scrollTop();
         // console.log(scr)
         if(scr === 0 ){
@@ -27,6 +66,7 @@ $(document).ready(function(){
             $('.navBar').find('.contact').addClass('on').siblings().removeClass('on')
         }
 
+       
     
     });
 
@@ -72,6 +112,7 @@ $(document).ready(function(){
    var typingBool = false;
    var typingIdx=0;
    var liIndex=0;
+   //li 요소의 갯수
    var liLength = $('.typing-text>ul>li').length;
    //typing-text 안에 있는 ul 안에있는 li 요소의 갯수
    console.log(liLength);
@@ -109,6 +150,8 @@ $(document).ready(function(){
         
     }
    
+    
+    
 
     refresh();
 })
