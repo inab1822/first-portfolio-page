@@ -68,7 +68,7 @@ $(document).ready(function(){
         let text = $('.msg').find('.text').val();
    })
 
-
+ 
    var typingBool = false;
    var typingIdx=0;
    var liIndex=0;
