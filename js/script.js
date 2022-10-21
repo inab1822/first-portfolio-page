@@ -151,7 +151,32 @@ $(document).ready(function(){
     }
    
     
-    
+   const circle = document.querySelector('.circle');
+   document.addEventListener('mousemove',(e) =>{
+    const mouseX = e.pageX;
+    const mouseY = e.pageY;
+    circle.style.left = mouseX + 'px';
+    circle.style.top = mouseY + 'px'
+   })
 
+   const btn = document.getElementById('button');
+
+   document.getElementById('form').addEventListener('submit', function(event) {
+      event.preventDefault();
+   
+      btn.value = '전송중...';
+   
+      const serviceID = 'default_service';
+      const templateID = 'template_woc7qor';
+   
+      emailjs.sendForm(serviceID, templateID, this)
+       .then(() => {
+         btn.value = 'Send Email';
+         alert('메일을 보냈습니다!');
+       }, (err) => {
+         btn.value = 'Send Email';
+         alert(JSON.stringify(err));
+       });
+   });
     refresh();
 })

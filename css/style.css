@@ -14,6 +14,23 @@ html{
 .on{
     background-color: #4a4252;
 }
+.cursor{
+    pointer-events: none;
+   
+
+}
+.cursor .circle{
+    position: absolute;
+    top:0;
+    left:0;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #3d3249;
+    z-index: 999999;
+    mix-blend-mode: difference;
+}
 .snow{
     width: 100%;
     height: 70%;
@@ -153,7 +170,8 @@ body{
 }
 .header ul li{
     width: 25%;
-    cursor: pointer;    
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace;
 }
 .title{
      
@@ -166,6 +184,7 @@ body{
     transform: translateX(-50%);
     font-size: 80px;
     text-align: center;
+    font-family: 'Jua', sans-serif;
     
     
 }
@@ -207,7 +226,7 @@ body{
     
 }
 .time .timeic{
-    font-size: 58px;
+    font-size: 57px;
     margin-left: 12px;
 }
 .timetxt{
@@ -435,6 +454,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;    
+    padding: 0 40px;
 }
 .text h2{
     margin-bottom: 30px;
@@ -555,36 +575,42 @@ body{
     
 }
 
-.gform p{
-    margin-left: 11%;
-    font-size: 25px;
-    color: #fff;
+.gform .field{
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+    
+}
+.field label{
+    color:#fff;
+    font-size: 30px;
+    font-family: jua;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.field input{
+    font-size:26px;
+    padding: 5px;
+    border-radius: 10px;
+    font-family: jua;
+}
+.field textarea{
+    font-size: 26px;
+    padding: 5px;
+    border-radius: 10px;
+    font-size:26px;
     font-weight: bold;
+    font-family: jua;
 }
-.gform p::selection{
+.gform #button{
+    margin: 20px auto;
+    width: 20%;
+    height: 34px;
+    border-radius: 10px;
+    font-size: 20px;
     background-color: #e6dfec;
-    color:#4a4252;
-}
-.gform input{
-    font-size: 20px;
-    width: 80%;
-    height: 29px;
-    margin: 0 auto;
-    margin-top: 10px;
-    margin-bottom: 23px;
-    border-radius: 10px;
-    padding: 5px;
-}
-.gform textarea{
-    height: 100px;
-    width: 80%;
-    font-size: 20px;
-    padding: 5px;
-    margin:0 auto;
-    border-radius: 10px;
-}
-.gform button{
-    width: 60px;
-    height: 32px;
-    margin: 0 auto;
+    font-family: jua;
+
+    
 }
