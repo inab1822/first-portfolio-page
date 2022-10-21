@@ -602,6 +602,7 @@ body{
     font-size:26px;
     font-weight: bold;
     font-family: jua;
+    resize: none;
 }
 .gform #button{
     margin: 20px auto;
@@ -614,3 +615,4 @@ body{
 
     
 }
+ 
